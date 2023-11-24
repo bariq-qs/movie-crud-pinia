@@ -1,0 +1,73 @@
+@import '../variable.scss';
+
+.home-layouts {
+  height: 100vh;
+  // background-color: red;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .layout-topbar {
+    padding: 15px 100px;
+    z-index: 2;
+    background: #292e35;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    & .title {
+      font-weight: 700;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .content {
+    padding: 50px 100px 50px 100px;
+    width: 100%;
+    flex: 1;
+  }
+
+  .footer {
+    background: $dark-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 100px 32px 100px;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-layouts {
+    .layout-topbar {
+      padding: 15px 50px;
+    }
+    .content {
+      padding: 30px 50px;
+    }
+    .footer {
+      padding: 32px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .home-layouts {
+    .layout-topbar {
+      padding: 15px 20px;
+    }
+    .content {
+      padding: 30px 20px;
+    }
+    .footer {
+      padding: 32px 20px;
+      display: block;
+      >div:nth-child(1) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
